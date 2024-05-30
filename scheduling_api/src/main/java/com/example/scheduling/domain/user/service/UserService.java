@@ -5,10 +5,17 @@ import com.example.scheduling.domain.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 public class UserService {
     private final UserRepository userRepository;
+
+    public void builderTest() {
+        User user = User
+                .builder()
+                .username("길기환")
+                .email("khgil@github.com")
+                .build();
+    }
 }
