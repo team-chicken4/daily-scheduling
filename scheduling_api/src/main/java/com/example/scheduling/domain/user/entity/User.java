@@ -10,10 +10,10 @@ import lombok.NoArgsConstructor;
 @Table(name = "users")
 @Getter
 @Builder
-@AllArgsConstructor
-@NoArgsConstructor
+@AllArgsConstructor // 전체필드에 대한 생성자 만들어줌
+@NoArgsConstructor  // 기본생성자 만들어줌
 public class User {
-    @Id
+    @Id //primary key
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
