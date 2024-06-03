@@ -14,15 +14,8 @@ import java.util.Optional;
 public class UserService {
     private final UserRepository userRepository;
 
-    public void builderTest() {
-        User user = User
-                .builder()
-                .id(1L)
-                .password("1234")
-                .username("길기환")
-                .email("khgil@github.com")
-                .build();
-        userRepository.save(user);
+    public User save(User user){
+        return userRepository.save(user);
     }
 
     public void findTest(){
