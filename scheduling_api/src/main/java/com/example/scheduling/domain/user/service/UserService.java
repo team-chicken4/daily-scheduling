@@ -1,5 +1,6 @@
 package com.example.scheduling.domain.user.service;
 
+import com.example.scheduling.domain.user.dto.UserRequestDto;
 import com.example.scheduling.domain.user.entity.User;
 import com.example.scheduling.domain.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -26,6 +27,8 @@ public class UserService {
     public User save(User user){
         return userRepository.save(user);
     }
+
+
     // 회원 전체 조회
     public List<User> findAll(){
         return userRepository.findAll();

@@ -22,7 +22,7 @@ import java.time.LocalDateTime;
 @Builder
 @AllArgsConstructor // 전체필드에 대한 생성자 만들어줌
 @NoArgsConstructor  // 기본생성자 만들어줌
-public class User {
+public class User extends BaseTime {
     @Id //primary key
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -43,10 +43,10 @@ public class User {
     private String email;
 
     //  현재날짜 자동입력
-    @CreatedDate
-    @Column(nullable = false)
-    @DateTimeFormat(pattern = "yyyy-MM-dd/HH:mm:ss")
-    private LocalDateTime createdAt = LocalDateTime.now();
+//    @CreatedDate
+//    @Column(nullable = false)
+//    @DateTimeFormat(pattern = "yyyy-MM-dd/HH:mm:ss")
+//    private LocalDateTime createdAt;
 
     //  수정날짜 자동입력
 //    @CreatedDate
